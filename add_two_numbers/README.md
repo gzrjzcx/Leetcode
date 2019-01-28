@@ -61,4 +61,4 @@ for(int i=0; i<3; i++)
 The idea here is that firstly assigning current node to the root node(in the first time, then root node should not be modified), and assignment prev_node to the current node. After then each time assigning prev_node->next to the current node and then assigning current node to the prev_node.  
 **Must assigning prev_node before assigning current node to prev_node, otherwise will lose the connection in the link.**  
 The process can be illustrated by the graph below:  
-![add node](/add_two_numbers/res/addnode.png)
+![add node](/add_two_numbers/res/addnode1.png)
