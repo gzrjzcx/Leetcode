@@ -8,7 +8,7 @@ The main idea is that the whole string will be divided into several substrings a
 
 The solution can be diagrammed as the figure below. Obviously, there are two patterns to re-arrange the string:  
   
-!(image)[/res/zigzag.png]
+![image](/res/zigzag.png)
   
 - `Vertical:` It means that the elements are structured vertically. It can be noted that the elements are arranged in order to the rows.
 - `Diagonal:` It means that the elements are structured diagonally. Please note that here the elements are arranged from bottom to top. And we consider that the first character and last character in each row as belong to the `vertical` pattern. For example, the first character `P` and the last character `P` in the `row=0` are belong to the `row=1`. In other words, there is only `A` in `row=1`, only `L` in `row=2`.  
