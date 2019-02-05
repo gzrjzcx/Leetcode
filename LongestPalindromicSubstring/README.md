@@ -28,7 +28,7 @@ The main idea of this method illustrated as finding the center of each palindrom
 - `Center is 1 character:` For example, the center of the `bab` is the `a`.
   
 Firstly, the algorithm can be diagrammed as the figure:  
-  
+
 ![dp](/LongestPalindromicSubstring/res/expand.png) 
   
 we assuming that the longest substring is `s[1][length-1]`, and then we will find the center in this substring. 
@@ -65,7 +65,7 @@ p[max_length] = '\0';
 ```
 Using this function should include the `<string.h>`.
 
-References:
+## References:
 - [different between Java and C](https://stackoverflow.com/questions/51494403/different-results-on-leetcode-by-submit-solution-and-run-code)
 
 - [substring in C](https://stackoverflow.com/questions/4214314/get-a-substring-of-a-char)
