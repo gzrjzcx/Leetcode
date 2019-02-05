@@ -15,6 +15,7 @@ The core idea of this problem is that we can check if a string(e.g., `p[i][j]`) 
 - According to the definition of the palindrome, we can using an array to store the flags of if a substring is palindromic or not. As a consequence, we will initialize an 2-d array to store them, and initializing the `sub_substring[i][j]=1, if i==j`, otherwise `sub_substring[i][j]==0`.
 - Then check each substrings of its string by the **length of the substring**. In other words, we will iterate this original string from `substring_length=2` to `substring_length<=length`.
 - Then in terms of the substring, we can make the `j=i+sub_length-1`(i.e., the end of this substring). Therefore, we can check that `if(sub_substring[i+1][j-1] == 1) && s[i]==[j]`, we can consider that this substring is the palindrome.  
+
 ![dp](/LongestPalindromicSubstring/res/dp.png)  
 As you can see:
 - `substring length = 2:` in this situation, each substring with `length=2` will be iterated and checked if it is palindromic. Obviously, only `s[i]==s[j]` is met the condition of the palindrome. Here, there is no palindrome in all substrings with length is 2.
@@ -27,6 +28,7 @@ The main idea of this method illustrated as finding the center of each palindrom
 - `Center is 1 character:` For example, the center of the `bab` is the `a`.
   
 Firstly, the algorithm can be diagrammed as the figure:  
+  
 ![dp](/LongestPalindromicSubstring/res/expand.png) 
   
 we assuming that the longest substring is `s[1][length-1]`, and then we will find the center in this substring. 
