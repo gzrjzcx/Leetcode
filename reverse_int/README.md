@@ -59,7 +59,7 @@ if( A==true )                               do
     if( B==true )                               if(A==false)
     {                                               break;	
         if( C==true )                           if(B==false)	
-        {											break;
+        {                                           break;
             if( D==true )     -->               if(C==false)
             {                                       break;
                 ...	                            if(D==false)
