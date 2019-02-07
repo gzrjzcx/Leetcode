@@ -55,7 +55,7 @@ In `C/C++`, the do...while loop in C programming checks its condition at the bot
 Therefore, there is a elegant method to do the nested `if` statements:
 ```c
 if( A==true )                               do
-{											{		
+{                                           {		
     if( B==true )								if(A==false)
     {												break;	
         if( C==true )							if(B==false)	
