@@ -67,4 +67,6 @@ if( A==true )                               do
         }                                       ...
     }                                       }while(false)
 ```
-Here, because `do...while` loop will be executed at least once, therefore, even the condition is `while(false)`, the code also will be executed once. And then the `break` is used to jump out to the `do...while` loop once one condition is not met.
+Here: 
+- Because `do...while` loop will be executed at least once, therefore, even the condition is `while(false)`, the code also will be executed once.
+- And then the `break` is used to jump out to the `do...while` loop once one condition is not met.
