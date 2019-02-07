@@ -70,3 +70,8 @@ if( A==true )                               do
 Here: 
 - Because `do...while` loop will be executed at least once, therefore, even the condition is `while(false)`, the code also will be executed once.
 - And then the `break` is used to jump out to the `do...while` loop once one condition is not met.
+
+## References
+- [do...while syntax](https://www.tutorialspoint.com/cprogramming/c_do_while_loop.htm)
+- [do...while example](https://blog.csdn.net/this_capslock/article/details/41843371)
+- [long long int](https://en.wikipedia.org/wiki/C_data_types)
