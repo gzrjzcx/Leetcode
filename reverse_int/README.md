@@ -7,7 +7,7 @@ Given a 32-bit signed integer, reverse digits of an integer.
   
 The core idea can be diagrammed as in figure above, we will iterate all of the digits in the integer `x`, and pick up the last digit in each iteration to accumulate to get the reversed integer.
   
-**Note that at each iteration the result will do `result * 10` operation, which means that the we can get the real value of the each digit in the original integer instead of only digit value.** For example, when we got the last digit `7`, it only means an integer `7` in the original value. However, in the reversed integer, `7` means `7 millions`. Therefore, with the iterations increased, the `7` will multiply the equal times of the original digits. As a consequence, the real value of the reversed integer will be guaranteed.
+**Note that at each iteration the result will do `result * 10` operation, which means that the we can get the real value of the each digit in the original integer instead of only digit value.** For example, when we got the last digit `7`, it only means an integer `7` in the original value. However, in the reversed integer, we need to interpret it as a practical numerical value(i.e., `7` means `7 millions`). Therefore, with the iterations increased, the `7` will multiply the equal times of the original digits. As a consequence, the real value of the reversed integer will be guaranteed.
   
 Specifically, each time we can pop the last digit(i.e., `7` in `x=1234567`) by `%` operation:
 ```c
