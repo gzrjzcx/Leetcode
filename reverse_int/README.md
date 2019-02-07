@@ -56,15 +56,15 @@ Therefore, there is a elegant method to do the nested `if` statements:
 ```c
 if( A==true )                               do
 {                                           {		
-    if( B==true )								if(A==false)
-    {												break;	
-        if( C==true )							if(B==false)	
+    if( B==true )                               if(A==false)
+    {                                               break;	
+        if( C==true )                           if(B==false)	
         {											break;
-            if( D==true )     -->    			if(C==false)
-            {										break;
-                ...								if(D==false)
-            }										break;
-        }										...
-    }										}while(false)
+            if( D==true )     -->               if(C==false)
+            {                                       break;
+                ...	                            if(D==false)
+            }                                       break;
+        }                                       ...
+    }                                       }while(false)
 ```
 Here, because `do...while` loop will be executed at least once, therefore, even the condition is `while(false)`, the code also will be executed once. And then the `break` is used to jump out to the `do...while` loop once one condition is not met.
