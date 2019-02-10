@@ -21,7 +21,8 @@ The difference here is that the negative situation should be taken into account.
 if(start_flag && str[i] == '-' && (str[i+1] >= '0' && str[i+1] <= '9'))
 ```
 Please note here we also need to check one special possible situation: `+-123`.
-In this case, it is an invalid integer because the first non-whitespace character is the `+` but the following is the `-` as well, instead of the `integer` value. As a consequence, the `(str[i+1] >= '0' && str[i+1] <= '9')` is used to check if the following character is a digit or not.
+In this case, it is an invalid integer because the first non-whitespace character is the `+` but the following is the `-` as well, instead of the `integer` value. As a consequence, the `(str[i+1] >= '0' && str[i+1] <= '9')` is used to check if the following character is a digit or not.  
+Moreover, the `start_flag` is intended as the flag to indicate if the conversation is start or not, because once the conversation is start(i.e., the first non-whitespace character is valid), then even the following character is **whitespace**, it is also an invalid case, instead of skipping the whitespace. For instance, `12 34`, the result is `12`.
 - `Other character:` once the first non-whitespace character is not a `integer` value, it can be confirmed that this is an invalid case.
   
 Additionally, in terms one of the possible situation: `-123+1`, the result will be `-123` because by the explanation of the original `atoi` function, once the first **non-whitespace** character is not the numerical digits, the conversation is finished.

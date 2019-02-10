@@ -42,7 +42,7 @@ int myAtoi(char* str) {
 }
 
 int main(int argc, char* argv[]){
-	char* str = "123-1";
+	char* str = "12 23";
 	int num = myAtoi(str);
 	printf("num=%d\n", num);
 }
