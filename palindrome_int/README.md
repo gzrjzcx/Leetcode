@@ -26,3 +26,25 @@ The process can be diagrammed by the figure:
 ![image](/palindrome_int/res/palindrome_int.png)
   
 It is clear that in the odd situation, the original `x` is split into `x=1` and `reverted_num = 12`, and finally compare: `x == reverted_num/10`.
+
+## Notes
+In `C`, there is no definition of `bool`(`C++` in verse), therefore, if we want to use `bool` there are two approaches:
+- `Defined by ourself:` 
+```c
+#ifndef __cplusplus
+#ifndef _BOOL
+typedef unsigned char bool;
+static const bool false = 0;
+static const bool true = 1;
+#endif
+#endif
+```
+- `using c99's:`
+```c
+#ifndef __cplusplus
+#include <stdbool.h>
+#endif
+```
+## References
+- [bool in C](https://stackoverflow.com/questions/10636120/check-if-bool-is-defined-in-mixed-c-c)
+- [print bool in C](https://stackoverflow.com/questions/17307275/what-is-the-printf-format-specifier-for-bool)
