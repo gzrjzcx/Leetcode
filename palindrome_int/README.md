@@ -21,6 +21,6 @@ With the intent of splitting the integer to a half, firstly we need to revert th
 	x == reverted_num
 	```
   
-The process can be diagrammed by the figure !(image)[/palindrome_int/res/palindrome_int.png]:
+The process can be diagrammed by the figure ![image](/palindrome_int/res/palindrome_int.png):
   
 It is clear that in the odd situation, the original `x` is split into `x=1` and `reverted_num = 12`, and finally compare: `x == reverted_num/10`.
