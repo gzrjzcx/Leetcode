@@ -16,7 +16,7 @@ The core idea of this problem is that we can check if a string(e.g., `p[i][j]`) 
 - Then check each substrings of its string by the **length of the substring**. In other words, we will iterate this original string from `substring_length=2` to `substring_length<=length`.
 - Then in terms of the substring, we can make the `j=i+sub_length-1`(i.e., the end of this substring). Therefore, we can check that `if(sub_substring[i+1][j-1] == 1) && s[i]==[j]`, we can consider that this substring is the palindrome.  
 
-![dp](/LongestPalindromicSubstring/res/dp.png)  
+![dp](/4_longest_palindromic_substr/res/dp.png)  
 As you can see:
 - `substring length = 2:` in this situation, each substring with `length=2` will be iterated and checked if it is palindromic. Obviously, only `s[i]==s[j]` is met the condition of the palindrome. Here, there is no palindrome in all substrings with length is 2.
 - `substring length = 3:` Similarly to the previous step, but the length of the substring increased to 3. Because `s[0] == s[2] && sub_substring[0+1][2-1]==1`, therefore, the substring `bab` is a palindrome. In the meantime, we will set the `sub_substring[0][2]=1` as the guidance for the checking of the longer substring.
@@ -29,7 +29,7 @@ The main idea of this method illustrated as finding the center of each palindrom
   
 Firstly, the algorithm can be diagrammed as the figure:  
 
-![dp](/LongestPalindromicSubstring/res/expand.png) 
+![dp](/4_longest_palindromic_substr/res/expand.png) 
   
 we assuming that the longest substring is `s[1][length-1]`, and then we will find the center in this substring. 
 - `Find double characters center(center = 2):` We will find this pattern firstly. Initially, `i=j=k=0`, and `s[j] != s[j+1]`, therefore `k++`. Then `i=j=k=1`, here `s[j] == s[j+1]`, therefore then `j=6`, and meanwhile `i>0 && j<length-1 && s[i-1] != s[j+1]`, we can get the substring `aaaaaa` is the palindromic substring.
